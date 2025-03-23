@@ -5,9 +5,12 @@
     },
     "waitFor": "onCreateCommand",
     "updateContentCommand": "pip install -r requirements.txt",
-    "postCreateCommand": "sudo apt update && sudo apt install mariadb-server -y && sudo service mariadb start",
+    "postCreateCommand": "",
     "postAttachCommand": {
       "server": "flask --debug run"
+    },
+    "features": {
+      "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
     },
     "portsAttributes": {
       "5000": {
